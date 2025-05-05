@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/appointment.dart';
 
 class ApiService {
-  final String baseUrl = 'http://10.0.2.2:5000/api'; // For Android emulator
+  final String baseUrl = 'https://medical-backend-3dcc.onrender.com/api'; // For Android emulator
   // Use 'http://localhost:5000/api' for iOS simulator
 
   // Create a new appointment

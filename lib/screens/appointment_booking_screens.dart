@@ -12,7 +12,7 @@ class AppointmentBookingScreen extends StatefulWidget {
 }
 
 class _AppointmentBookingScreenState extends State {
-  final _formKey = GlobalKey();
+  final _formKey = GlobalKey<FormState>();
   final _reasonController = TextEditingController();
   final ApiService _apiService = ApiService();
 

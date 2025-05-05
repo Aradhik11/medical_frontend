@@ -32,37 +32,46 @@ class BookingConfirmationScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Column(children: [
-            Container(
-              width: 80,
-              height: 80,
-              decoration: BoxDecoration(
-                color: Colors.teal[50],
-                shape: BoxShape.circle,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+              Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  color: Colors.teal[50],
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  Icons.check_circle,
+                  size: 50,
+                  color: Colors.teal[400],
+                ),
               ),
-              child: Icon(
-                Icons.check_circle,
-                size: 50,
-                color: Colors.teal[400],
+              const SizedBox(height: 16),
+              const Text(
+                'Appointment Booked!',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            const SizedBox(height: 16),
-            const Text(
-              'Appointment Booked!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+              const SizedBox(height: 8),
+              const Text(
+                'Your appointment has been confirmed',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              'Your appointment has been confirmed',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
-            ),
-          ],),
+                Text(appointment.clinicName),
+                Text(appointment.reason),
+                Text( DateFormat('EEEE, MMM d, yyyy | h:mm a').format(appointment.appointmentDate))
+
+            ],),
+          ),
         ),
       ),
     );

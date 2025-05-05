@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/appointment_booking_screen.dart';
+import 'package:medical/screens/appointment_booking_screens.dart';
 
 void main() {
   runApp(const MyApp());
